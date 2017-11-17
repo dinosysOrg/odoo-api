@@ -57,8 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
-# compiled folder
-dist/
-
 .package.json.swp
 package-lock.json
