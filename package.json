@@ -1,0 +1,52 @@
+{
+  "name": "odoo-api",
+  "description": "Odoo API",
+  "keywords": [
+    "odoo",
+    "jsonrpc",
+    "rpc",
+    "json",
+    "client",
+    "node",
+    "api",
+    "orm"
+  ],
+  "version": "1.0.0",
+  "preferGlobal": false,
+  "author": "Nguyen Phu Quang <nguyenphuquang@gmail.com> (https://github.com/nguyenphuquang)",
+  "contributors": [
+    "Toan Tran <toan.tran@dinosys.vn> (https://github.com/toantraz)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dinosysOrg/odoo-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dinosysOrg/odoo-api/issues"
+  },
+  "directories": {},
+  "main": "./lib/odoo.js",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "superagent": "^3.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "mocha": "^3.5.3",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register --timeout 30000",
+    "build": "./node_modules/.bin/babel ./src -d lib --ignore 'test/**'",
+    "start": "npm run build"
+  },
+  "engines": {
+    "node": ">=6.0",
+    "npm": ">=1.0.0"
+  },
+  "license": "MIT"
+}
