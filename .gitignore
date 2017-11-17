@@ -58,7 +58,7 @@ typings/
 .env
 
 # compiled folder
-lib/
+dist/
 
 .package.json.swp
 package-lock.json
