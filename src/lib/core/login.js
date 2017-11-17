@@ -2,7 +2,7 @@ export default function login(callback) {
   let self = this
   let params = { db: this._settings.db,  login: this._settings.username, password: this._settings.password }
   this.post(this._settings.url, '/web/session/authenticate', params, this._session || {}, function (err, resp) {
-    if (!resp.body.error) {
+    if (!err) {
       let cookie = resp.headers['set-cookie']
       if (Array.isArray(cookie)) {
         cookie = cookie[0]
