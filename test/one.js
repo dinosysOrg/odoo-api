@@ -8,8 +8,10 @@ describe('Test one() method', function() {
         it('get a single res.partner', function(done) {
           // assuming id = 1 available in db
           odoo.settings(options).login(function(err, resp) {
-            odoo.one('res.partner', 1, function (err, result) {
+            odoo.one('res.partner', 1, { fields: [ 'name', 'display_name' ] }, function (err, result) {
               assert.equal(1, result.id)
+              assert.ok(result.name)
+              assert.ok(result.display_name)
               done()
             })
           }, function (err) {
