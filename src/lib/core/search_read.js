@@ -1,5 +1,8 @@
-export default function search_read(model, domain, kwargs, callback) {
-  this.call_kw(model, 'search_read', [domain], kwargs, function (err, resp) {
+export default function search_read(model, domain, fields, kwargs, callback) {
+  let params = Object.assign({}, kwargs)
+  params.domain = domain
+  params.fields = fields
+  this.call_kw(model, 'search_read', [], params, function (err, resp) {
     if (callback) {
       let result = []
       if (!err) {
