@@ -28,7 +28,6 @@
   "main": "./dist/odoo.js",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "moment": "^2.18.1",
     "superagent": "^3.6.0"
   },
   "devDependencies": {
